@@ -6,10 +6,7 @@
 import { computed } from 'vue';
 
 const props = defineProps<{
-  text: {
-    type: String,
-    default: () => ''
-  }
+  text: string
 }>()
 
 const text = computed(() => props.text || '加载中....')
