@@ -24,3 +24,12 @@ export function isUndef(v: any) {
 export function isNul(v: any) {
   return typeof v !== 'object' && v === null
 }
+
+/**
+ * 检测数值是否为 对象
+ * @param v 待检测数值
+ * @returns boolean
+ */
+export function isObj(v: any) {
+  return typeof v === 'object' && v !== null
+}
