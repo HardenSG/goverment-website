@@ -4,6 +4,7 @@ import type { generalStringObj, objectMixinStringOrObject } from './types'
 /**
  * 预加载静态资源列表
  * @param o 待加载对象列表
+ * @returns {{key: string, value: string}[]}
  */
 export function preloadStaticResource(
   o: objectMixinStringOrObject<objectMixinStringOrObject<any> | generalStringObj>
@@ -18,6 +19,8 @@ export function preloadStaticResource(
       img.src = v.value
     })
   })
+
+  return arr
 }
 
 /**
